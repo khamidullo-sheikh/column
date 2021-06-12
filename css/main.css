@@ -14,9 +14,139 @@ html{
     box-sizing: inherit;
 }
 
-.container{
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 15px;
+body{
+    display: flex;
+    list-style: circle;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Lexend Deca','Arial', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 25px;
+    color: #FFFFFF;
 }
 
+p{
+    opacity: .75;
+    margin: 0;
+}
+
+h1{
+    font-family: Big Shoulders Display;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #F2F2F2;
+    margin-bottom: 25px;
+    margin-top: 35px;
+    opacity: 1;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 32px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 28px;
+    margin-top: 80px;
+    text-align: center;
+    transition: background-color .3s ease;
+}
+
+.btn:hover{
+    background-color: #fff;
+}
+
+.card:first-child .btn:hover{
+    color: #E28625;
+}
+
+.card:nth-child(2) .btn:hover{
+    color: #006971
+}
+
+.card:last-child .btn:hover{
+    color: #004140
+}
+
+/* ---------------------- */
+/* ------- CARDS -------- */
+/* ---------------------- */
+
+.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 307px;
+    height: 500px;
+    border-radius: 8px;
+    padding: 45px;
+    position: relative;
+    z-index: 0;
+}
+
+.img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.card:first-child{
+    background-color: #E28625;
+}
+
+.card:nth-child(2){
+    background-color: #006971;
+}
+
+.card:last-child{
+    background-color: #004140;
+}
+
+.img::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    top: 0px;
+    left: 50%;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.card:first-child .img{
+    background-color: #B46B1E;
+}
+
+.card:nth-child(2) .img{
+    background-color: #00545A;
+}
+
+.card:last-child .img{
+    background-color: #003433;
+}
+
+.card:first-child .img::before{
+    background-image: url(../img/car1.svg);
+}
+
+.card:nth-child(2) .img::before{
+    background-image: url(../img/car2.svg);
+}
+
+.card:last-child .img::before{
+    background-image: url(../img/car3.svg);
+}
